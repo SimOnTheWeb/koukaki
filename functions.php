@@ -1,11 +1,20 @@
 <?php
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
+    // Chargement du fichier JS de swiper avec le CDN
+    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), false, true);
+
+    // Chargement du fichier CSS swiper avec le CDN
+    wp_enqueue_style('swiper-style', "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" , array());
+
+    // Chargement du style thème parent
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 
-    // Chargement du css avec version basée sur le timestamp
-    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/sass/style.css', filemtime(get_stylesheet_directory() . '/sass/style.css')
-    );
+    // Chargement du style personnalisé du thème enfant
+    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/sass/style.css', array(), time());
+
+    // Chargement du script du thème enfant avec JQuery
+    wp_enqueue_script('script', get_theme_file_uri() . '/js/script.js', array('jquery'), time(), true);
 }
 
 // Get customizer options form parent theme

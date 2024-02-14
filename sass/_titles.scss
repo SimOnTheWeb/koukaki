@@ -1,0 +1,35 @@
+//TITLES
+
+.title_animation {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 1s, opacity 1s;
+}
+
+//TITLES SEPERATE CHILDS
+
+.show:nth-child(1) {
+  animation: title_up 0.6s ease-in-out forwards;
+}
+
+.show:nth-child(2) {
+  animation: title_up 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+//TITLES KEYFRAME
+
+@keyframes title_up {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
