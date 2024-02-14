@@ -108,6 +108,7 @@ h2::after,
 .nomination::after {
   line-height: 0;
   animation: rotate_flower 14s linear infinite;
+  overflow: auto;
 }
 
 @keyframes rotate_flower {
