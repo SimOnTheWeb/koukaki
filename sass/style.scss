@@ -1,14 +1,6 @@
-// BANNER
+@import "banner";
+@import "titles";
+@import "flowers";
+@import "nomination";
 
-.banner {
-  animation: move-down 2000ms;
-}
-
-@keyframes move-down {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(500px);
-  }
-}
+//

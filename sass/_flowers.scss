@@ -1,0 +1,23 @@
+// FLOWERS
+
+.story__article::after,
+h2::after,
+#studio h2::before,
+#studio h2::after,
+.nomination::before,
+.nomination::after {
+  line-height: 0;
+  animation: rotate_flower 14s linear infinite;
+  overflow: auto;
+}
+
+// FLOWERS KEYFRAME ROTATION
+
+@keyframes rotate_flower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
