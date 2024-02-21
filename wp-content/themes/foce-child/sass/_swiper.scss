@@ -1,0 +1,32 @@
+.characters__swiper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  align-self: flex-start;
+  z-index: 2;
+}
+
+div {
+  flex: none !important;
+}
+
+.swiper {
+  width: 90%;
+  padding-bottom: 150px;
+  &-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

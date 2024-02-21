@@ -71,7 +71,7 @@
     display: block;
   }
 }
-.title_animation {
+.title__animation {
   display: inline-block;
   opacity: 0;
   transform: translateY(100px);
@@ -124,8 +124,6 @@ h2::after,
   position: relative;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  height: 400px;
   padding-top: 5em;
 }
 .nomination_title {
@@ -165,4 +163,56 @@ h2::after,
   position: absolute;
   right: -6em;
   top: -5%;
+}
+
+.characters__swiper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  align-self: flex-start;
+  z-index: 2;
+}
+
+div {
+  flex: none !important;
+}
+
+.swiper {
+  width: 90%;
+  padding-bottom: 150px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.story #place {
+  background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+}
+.story #place img {
+  filter: blur(15px);
+  transform: translateX(0);
+}
+.story #place img.big__cloud {
+  position: relative;
+  bottom: 150%;
+  left: 200%;
+  transition: transform 2s ease-in-out;
+}
+.story #place img.small__cloud {
+  position: relative;
+  bottom: 40%;
+  left: 80%;
+  transition: transform 2s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
