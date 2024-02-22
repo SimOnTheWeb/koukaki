@@ -33,12 +33,20 @@
                 <span class="line"></span>
             </button>
             <ul>
-                <li><a href="#story">Histoire</a></li>
-                <li><a href="#characters">Personnages</a></li>
                 <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-                <li><a href="#place">Lieu</a></li>
-                <li><a href="#studio">Studio Koukaki</a></li>
             </ul>
+            <ul class="nav_menu">
+                <li class="nav_item"><a href="#story" class="nav_link">Histoire</a></li>
+                <li class="nav_item"><a href="#characters" class="nav_link">Personnages</a></li>
+                <li class="nav_item"><a href="#place" class="nav_link">Lieu</a></li>
+                <li class="nav_item"><a href="#studio" class="nav_link">Studio Koukaki</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

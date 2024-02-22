@@ -1,0 +1,55 @@
+// BURGER
+
+.nav_menu {
+  position: fixed;
+  left: -100%;
+  top: 70px;
+  gap: 0;
+  flex-direction: column;
+  background-color: #fff5e9;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.nav_menu.active {
+  left: 0;
+}
+
+.nav_link {
+  font-size: 40px;
+  transition: 0.7s ease;
+}
+
+.nav_link:hover {
+  color: #f19840;
+  filter: blur(5px);
+  transition: opacity 0.3s;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
