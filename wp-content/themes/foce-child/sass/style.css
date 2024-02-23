@@ -215,4 +215,78 @@ div {
   bottom: 40%;
   left: 80%;
   transition: transform 2s ease-in-out;
+}
+
+.main-navigation {
+  z-index: 1000;
+  background-color: #ffd5a2;
+  display: flex;
+  width: 100%;
+}
+
+.site-title {
+  display: flex !important;
+  align-items: center;
+  margin-left: 38%;
+}
+
+.site-title:hover {
+  color: black;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 95%;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+.nav_menu {
+  position: fixed;
+  left: -100%;
+  top: 70px;
+  gap: 0;
+  flex-direction: column;
+  background-color: #fff5e9;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.nav_menu.active {
+  left: 0;
+}
+
+.nav_link {
+  font-size: 40px;
+  transition: 0.7s ease;
+}
+
+.nav_link:hover {
+  color: black;
+  text-shadow: 0 0 10px rgb(255, 168, 133);
+  transition: opacity 0.3s;
 }/*# sourceMappingURL=style.css.map */

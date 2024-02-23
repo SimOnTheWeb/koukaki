@@ -27,26 +27,29 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <ul>
-                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-            </ul>
-            <ul class="nav_menu">
-                <li class="nav_item"><a href="#story" class="nav_link">Histoire</a></li>
-                <li class="nav_item"><a href="#characters" class="nav_link">Personnages</a></li>
-                <li class="nav_item"><a href="#place" class="nav_link">Lieu</a></li>
-                <li class="nav_item"><a href="#studio" class="nav_link">Studio Koukaki</a></li>
-            </ul>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title" rel="home"><?php bloginfo( 'name' ); ?></a>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-                <span class="bar"></span>
             </div>
+        </nav><!--#site-navigation -->
 
-		</nav><!-- #site-navigation -->
+        <section class="">
+            <div class="">
+                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/orchid.png' ?>" class="orchid_burger" alt="Fleur d'orchidée tournant sur elle-même">
+                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/Sunflower.png'?>" class="sunflower_burger" alt="Fleur de tournesol tournant sur elle-même">
+                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/flower.png'?>" class="flower_burger" alt="Fleur tournant sur elle-même">
+                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/random_flower.png'?>" class="random_flower_burger" alt="Fleur aléatoire tournant sur elle-même">
+                
+                <ul class="nav_menu">
+                    <li><a href="#story" class="nav_link">Histoire</a></li>
+                    <li><a href="#characters" class="nav_link">Personnages</a></li>
+                    <li><a href="#place" class="nav_link">Lieu</a></li>
+                    <li><a href="#studio" class="nav_link">Studio Koukaki</a></li>
+                </ul>
+                <p class="text_menu">STUDIO KOUKAKI</p>
+            </div>
+        </section>
+            
 	</header><!-- #masthead -->
