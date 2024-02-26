@@ -12,7 +12,7 @@ get_header();
             <img class="banner__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
                 alt="logo Fleurs d'oranger & chats errants">
         </section>
-        <section id="story" class="story section_animation">
+        <section id="story" class="story">
             <h2>
                 <span class="title__animation">L'</span>
                 <span class="title__animation">histoire</span>
@@ -21,7 +21,7 @@ get_header();
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             
-            <!-- Ajout du wiper de la section characters -->
+            <!-- Ajout du swiper de la section characters -->
             <?php get_template_part('template-parts/characters') ;?>
 
             <article id="place" class="story__place">

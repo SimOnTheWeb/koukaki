@@ -64,11 +64,20 @@
   }
 }
 @media (max-width: 768px) {
+  .banner {
+    min-height: 400px;
+  }
   .banner__video {
     display: none;
   }
   .banner__logo {
     display: block;
+  }
+}
+@media (max-width: 1024px) {
+  .banner {
+    max-width: 1024px;
+    height: auto;
   }
 }
 .title__animation {
@@ -100,6 +109,50 @@
     transform: translateY(0);
   }
 }
+@media screen and (max-width: 320px) {
+  .main-navigation .site-title {
+    font-size: 0.8rem;
+    position: relative;
+    right: 50px;
+    top: 30px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 426px) {
+  #studio h2,
+  h3 {
+    font-size: 1.5rem;
+  }
+  #studio h2 {
+    overflow: visible;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .main-navigation .site-title {
+    position: relative;
+    right: 65px;
+  }
+  .story__place h3 {
+    align-self: center;
+  }
+  .characters__swiper h3 {
+    align-self: center;
+  }
+  .nomination_title {
+    min-width: 300px;
+  }
+  .nomination_title h3 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-navigation .site-title {
+    margin-left: 33% !important;
+  }
+}
 .story__article::after,
 h2::after,
 #studio h2::before,
@@ -109,6 +162,8 @@ h2::after,
   line-height: 0;
   animation: rotate_flower 14s linear infinite;
   overflow: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 @keyframes rotate_flower {
@@ -125,6 +180,7 @@ h2::after,
   justify-content: center;
   align-items: center;
   padding-top: 5em;
+  height: 500px;
 }
 .nomination_title {
   width: 58%;
@@ -154,17 +210,30 @@ h2::after,
 .nomination::before {
   content: url("../assets/images/Sunflower.png");
   position: absolute;
-  left: 7em;
-  top: 5%;
+  left: 9%;
+  top: 10%;
+  max-width: 100%;
+  height: auto;
 }
 
 .nomination::after {
   content: url("../assets/images/orchid.png");
   position: absolute;
-  right: -6em;
+  right: -5%;
   top: -5%;
+  overflow: auto;
+  max-width: 100%;
+  height: auto;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .nomination {
+    flex-wrap: wrap !important;
+  }
+  .nomination::before {
+    display: none;
+  }
+}
 .characters__swiper {
   display: flex;
   flex-direction: column;
@@ -197,6 +266,17 @@ div {
   width: 100%;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .swiper {
+    width: 100%;
+  }
+  .swiper img {
+    height: 250px;
+    min-width: 250px !important;
+    position: relative;
+    right: 10%;
+  }
+}
 .story #place {
   background-image: url("../assets/images/Studio_Koukaki-image_place.png");
 }
@@ -205,57 +285,64 @@ div {
   transform: translateX(0);
 }
 .story #place img.big__cloud {
-  position: relative;
-  bottom: 150%;
-  left: 200%;
+  position: absolute;
+  top: 69%;
+  left: 60%;
   transition: transform 2s ease-in-out;
 }
 .story #place img.small__cloud {
-  position: relative;
-  bottom: 40%;
-  left: 80%;
+  position: absolute;
+  top: 79%;
+  left: 42%;
   transition: transform 2s ease-in-out;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .big__cloud {
+    left: 95% !important;
+    width: 30%;
+  }
+  .small__cloud {
+    left: 60% !important;
+    width: 15%;
+  }
+  .story #place > div p {
+    text-align: center;
+    padding-left: 0em;
+    padding-top: 50px;
+  }
+}
 .main-navigation {
-  z-index: 1000;
   background-color: #ffd5a2;
   display: flex;
   width: 100%;
 }
-
-.site-title {
+.main-navigation .site-title {
   display: flex !important;
   align-items: center;
   margin-left: 38%;
 }
-
-.site-title:hover {
+.main-navigation .site-title:hover {
   color: black;
 }
-
-.hamburger {
+.main-navigation .hamburger {
   width: 30px;
   height: 30px;
   cursor: pointer;
   position: absolute;
   margin-top: 25px;
-  margin-left: 95%;
+  margin-left: 85%;
 }
-
-.hamburger.active .bar:nth-child(2) {
+.main-navigation .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
-
-.hamburger.active .bar:nth-child(1) {
+.main-navigation .hamburger.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-
-.hamburger.active .bar:nth-child(3) {
+.main-navigation .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
-
-.bar {
+.main-navigation .hamburger .bar {
   display: block;
   width: 30px;
   height: 3px;
@@ -263,30 +350,191 @@ div {
   transition: all 0.3s ease-in-out;
   background-color: black;
 }
-
-.nav_menu {
+.main-navigation .nav_menu,
+.main-navigation .logo_menu,
+.main-navigation .flowers_menu,
+.main-navigation .cats_menu,
+.main-navigation .text_menu {
   position: fixed;
-  left: -100%;
-  top: 70px;
-  gap: 0;
+  left: -150%;
+  top: 80px;
   flex-direction: column;
   background-color: #fff5e9;
   width: 100%;
   text-align: center;
   transition: 0.5s;
+  pointer-events: none;
 }
-
-.nav_menu.active {
+.main-navigation .nav_menu.active,
+.main-navigation .logo_menu.active,
+.main-navigation .flowers_menu.active,
+.main-navigation .cats_menu.active,
+.main-navigation .text_menu.active {
   left: 0;
 }
-
-.nav_link {
-  font-size: 40px;
-  transition: 0.7s ease;
+.main-navigation .nav_container {
+  height: 50%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 }
-
-.nav_link:hover {
+.main-navigation .nav_link {
+  font-size: 32px;
+  transition: 0.7s ease;
+  pointer-events: auto;
+}
+.main-navigation .nav_link:hover {
   color: black;
   text-shadow: 0 0 10px rgb(255, 168, 133);
   transition: opacity 0.3s;
+}
+.main-navigation .logo_menu {
+  display: flex;
+  align-items: center;
+}
+.main-navigation .logo_menu .logo_burger {
+  width: 200px;
+  height: auto;
+}
+.main-navigation .orchid_burger,
+.main-navigation .sunflower_burger,
+.main-navigation .flower_burger,
+.main-navigation .random_flower_burger,
+.main-navigation .hibiscus_burger {
+  position: absolute;
+  animation: rotate_flower 14s linear infinite;
+}
+.main-navigation .orchid_burger {
+  top: 50px;
+  left: -55px;
+  width: 150px;
+  height: auto;
+}
+.main-navigation .sunflower_burger {
+  top: 60px;
+  left: 70%;
+  width: 200px;
+  height: auto;
+}
+.main-navigation .flower_burger {
+  top: 310px;
+  left: 20%;
+  width: 50px;
+  height: auto;
+}
+.main-navigation .random_flower_burger {
+  top: 250px;
+  right: -30px;
+  width: 55px;
+  height: auto;
+}
+.main-navigation .hibiscus_burger {
+  top: 340px;
+  right: -200px;
+  width: 30%;
+}
+.main-navigation .blue_cat,
+.main-navigation .black_cat,
+.main-navigation .orange_cat {
+  position: absolute;
+}
+.main-navigation .blue_cat {
+  top: 130px;
+  left: 25%;
+  width: 110px;
+  height: auto;
+  animation: floating_blue_cat 6s 1.5s infinite ease-in-out;
+}
+.main-navigation .black_cat {
+  top: 300px;
+  left: 70%;
+  width: 130px;
+  height: auto;
+  animation: floating_black_cat 6s 1.5s infinite ease-in-out;
+}
+.main-navigation .orange_cat {
+  top: 420px;
+  left: 8%;
+  width: 95px;
+  height: auto;
+  animation: floating_orange_cat 6s 1.5s infinite ease-in-out;
+}
+@keyframes floating_blue_cat {
+  0% {
+    transform: translate3d(-5px, 10px, 0);
+  }
+  15% {
+    transform: translate3d(8px, -7px, 0);
+  }
+  50% {
+    transform: translate3d(-5px, 2px, 0);
+  }
+  70% {
+    transform: translate3d(8px, -12px, 0);
+  }
+  100% {
+    transform: translate3d(-5px, 10px, 0);
+  }
+}
+@keyframes floating_black_cat {
+  0% {
+    transform: translate3d(10px, 5px, 0);
+  }
+  15% {
+    transform: translate3d(0px, -14px, 0);
+  }
+  40% {
+    transform: translate3d(5px, 0px, 0);
+  }
+  50% {
+    transform: translate3d(-8px, 12px, 0);
+  }
+  70% {
+    transform: translate3d(8px, -8px, 0);
+  }
+  88% {
+    transform: translate3d(4px, 2px, 0);
+  }
+  100% {
+    transform: translate3d(10px, 5px, 0);
+  }
+}
+@keyframes floating_orange_cat {
+  0% {
+    transform: translate3d(3px, 5px, 0);
+  }
+  15% {
+    transform: translate3d(-7px, -14px, 0);
+  }
+  70% {
+    transform: translate3d(-7px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(3px, 5px, 0);
+  }
+}
+.main-navigation .text_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 90%;
+  background: transparent;
+}
+.main-navigation .text_menu .text_burger {
+  font-size: 16px;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .site-header {
+    background-color: #ffd5a2;
+    height: 80px;
+  }
+  .main-navigation a {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  #studio > div p {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

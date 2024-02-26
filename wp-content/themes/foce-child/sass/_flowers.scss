@@ -9,6 +9,8 @@ h2::after,
   line-height: 0;
   animation: rotate_flower 14s linear infinite;
   overflow: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 // FLOWERS KEYFRAME ROTATION

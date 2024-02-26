@@ -31,25 +31,34 @@
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span>                
+                <ul class="nav_menu">
+                    <div class="nav_container">
+                        <li><a href="#story" class="nav_link">Histoire</a></li>
+                        <li><a href="#characters" class="nav_link">Personnages</a></li>
+                        <li><a href="#place" class="nav_link">Lieu</a></li>
+                        <li><a href="#studio" class="nav_link">Studio Koukaki</a></li>
+                    </div>
+                </ul>
+                <div class="logo_menu">
+                    <img class="logo_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo_burger.png'?>" alt="Logo du site Koukaki">
+                </div>
+                <div class="flowers_menu">
+                    <img class="orchid_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/orchid.png' ?>" alt="Fleur d'orchidée tournant sur elle-même">
+                    <img class="sunflower_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/Sunflower.png'?>" alt="Fleur de tournesol tournant sur elle-même">
+                    <img class="flower_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/flower.png'?>" alt="Fleur tournant sur elle-même">
+                    <img class="random_flower_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/random_flower.png'?>" alt="Fleur aléatoire tournant sur elle-même">
+                    <img class="hibiscus_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/hibiscus_footer.png'?>" alt="Fleur d'hibiscus tournante sur elle-même">
+                </div>
+                <div class="cats_menu">
+                    <img class="blue_cat" src="<?php echo get_stylesheet_directory_uri().'/assets/images/blue_cat.png'?>" alt="Tête de chat bleue dansante">
+                    <img class="black_cat" src="<?php echo get_stylesheet_directory_uri().'/assets/images/black_cat.png'?>" alt="Tête de chat noir dansante">
+                    <img class="orange_cat" src="<?php echo get_stylesheet_directory_uri().'/assets/images/orange_cat.png'?>" alt="Tête de chat rouge dansante">
+                </div>
+                <div class="text_menu">
+                    <p class="text_burger">STUDIO KOUKAKI</p>
+                </div>
             </div>
         </nav><!--#site-navigation -->
-
-        <section class="">
-            <div class="">
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/orchid.png' ?>" class="orchid_burger" alt="Fleur d'orchidée tournant sur elle-même">
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/Sunflower.png'?>" class="sunflower_burger" alt="Fleur de tournesol tournant sur elle-même">
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/flower.png'?>" class="flower_burger" alt="Fleur tournant sur elle-même">
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/random_flower.png'?>" class="random_flower_burger" alt="Fleur aléatoire tournant sur elle-même">
-                
-                <ul class="nav_menu">
-                    <li><a href="#story" class="nav_link">Histoire</a></li>
-                    <li><a href="#characters" class="nav_link">Personnages</a></li>
-                    <li><a href="#place" class="nav_link">Lieu</a></li>
-                    <li><a href="#studio" class="nav_link">Studio Koukaki</a></li>
-                </ul>
-                <p class="text_menu">STUDIO KOUKAKI</p>
-            </div>
-        </section>
             
 	</header><!-- #masthead -->

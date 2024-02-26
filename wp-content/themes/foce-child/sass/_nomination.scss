@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 5em;
+  height: 500px;
 
   &_title {
     width: 58%;
@@ -41,13 +42,30 @@
 .nomination::before {
   content: url("../assets/images/Sunflower.png");
   position: absolute;
-  left: 7em;
-  top: 5%;
+  left: 9%;
+  top: 10%;
+  max-width: 100%;
+  height: auto;
 }
 
 .nomination::after {
   content: url("../assets/images/orchid.png");
   position: absolute;
-  right: -6em;
+  right: -5%;
   top: -5%;
+  overflow: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+// MEDIAQUERIES
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .nomination {
+    flex-wrap: wrap !important;
+  }
+
+  .nomination::before {
+    display: none;
+  }
 }

@@ -81,16 +81,28 @@ document.addEventListener("DOMContentLoaded", function () {
 // HAMBURGER MENU
 
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav_menu");
+const elementsToToggle = [
+  document.querySelector(".nav_menu"),
+  document.querySelector(".logo_menu"),
+  document.querySelector(".flowers_menu"),
+  document.querySelector(".cats_menu"),
+  document.querySelector(".text_menu"),
+];
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav_link").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
+hamburger.addEventListener("click", toggleMenu);
+elementsToToggle.forEach((element) =>
+  element.addEventListener("click", toggleMenu)
 );
+document
+  .querySelectorAll(".nav_link")
+  .forEach((link) => link.addEventListener("click", closeMenu));
+
+function toggleMenu() {
+  hamburger.classList.toggle("active");
+  elementsToToggle.forEach((element) => element.classList.toggle("active"));
+}
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  elementsToToggle.forEach((element) => element.classList.remove("active"));
+}
