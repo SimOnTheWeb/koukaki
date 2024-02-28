@@ -41,7 +41,7 @@
                     </div>
                 </ul>
                 <div class="logo_menu">
-                    <img class="logo_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo_burger.png'?>" alt="Logo du site Koukaki">
+                    <img id="#logo_menu" class="logo_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo_burger.png'?>" alt="Logo du site Koukaki">
                 </div>
                 <div class="flowers_menu">
                     <img class="orchid_burger" src="<?php echo get_stylesheet_directory_uri().'/assets/images/orchid.png' ?>" alt="Fleur d'orchidée tournant sur elle-même">

@@ -33,8 +33,8 @@ get_header();
 
                         <!-- Ajout des nuages avec mouvement de parallax dans la section Lieu -->
                         <div class="parallax-container">
-                            <img class="big__cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/big_cloud.png'; ?>" alt="gros nuage qui se déplace" />
-                            <img class="small__cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/little_cloud.png'; ?>" alt="petit nuage qui se déplace" />
+                            <img class="big__cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/big_cloud.png'; ?>" alt="gros nuage qui se déplace"/>
+                            <img class="small__cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/little_cloud.png'; ?>" alt="petit nuage qui se déplace"/>
                         </div>
                         
 
