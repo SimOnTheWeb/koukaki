@@ -1,0 +1,46 @@
+.characters__swiper {
+  flex-direction: column;
+  width: 100%;
+}
+
+h3 {
+  align-self: flex-start;
+  z-index: 2;
+}
+
+div {
+  flex: none !important;
+}
+
+.swiper {
+  width: 95%;
+  padding-bottom: 150px;
+
+  &-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+// MEDIAQUERIES
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .swiper {
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 0px;
+
+    img {
+      min-width: 100px !important;
+      position: relative;
+    }
+  }
+}
