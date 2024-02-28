@@ -1,5 +1,7 @@
+// TITLES ANIMATION
+
 // Je séléctionne tout les titres
-const animationTitles = document.querySelectorAll(".title_animation");
+const animationTitles = document.querySelectorAll(".title__animation");
 
 // Création de l'observer
 const observer = new IntersectionObserver((entries) => {

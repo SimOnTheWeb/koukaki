@@ -5,13 +5,14 @@ h2::after,
 #studio h2::before,
 #studio h2::after,
 .nomination::before,
-.nomination::after {
+.nomination::after,
+.site-footer ul::after {
   line-height: 0;
   animation: rotate_flower 14s linear infinite;
   overflow: auto;
 }
 
-// FLOWERS KEYFRAME ROTATION
+// KEYFRAME FLOWERS ROTATION
 
 @keyframes rotate_flower {
   from {
@@ -19,5 +20,20 @@ h2::after,
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+// MEDIAQUERIES
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .story h2::after,
+  .story__article::after,
+  #studio h2::after,
+  #studio h2::before,
+  .nomination::before,
+  .nomination::after,
+  .site-footer::before,
+  .site-footer::after {
+    display: none;
   }
 }

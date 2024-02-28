@@ -73,14 +73,25 @@
   }
 }
 
-// BANNER MEDIAQUERIES
+// MEDIAQUERIES
 
 @media (max-width: 768px) {
+  .banner {
+    min-height: 400px;
+  }
+
   .banner__video {
     display: none; // Masquer la vidéo en version mobile
   }
 
   .banner__logo {
     display: block; // Afficher l'image en version mobile
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    max-width: 1024px;
+    height: auto;
   }
 }

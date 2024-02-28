@@ -1,6 +1,6 @@
 //TITLES
 
-.title_animation {
+.title__animation {
   display: inline-block;
   opacity: 0;
   transform: translateY(100px);
@@ -31,5 +31,56 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+// MEDIAQUERIES
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .main-navigation .site-title {
+    position: relative;
+    right: 60px;
+    top: 30px;
+  }
+
+  .story__place h3,
+  .characters__swiper h3 {
+    align-self: center;
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .main-navigation .site-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .main-navigation .site-title {
+    font-size: 1.18rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  #studio h2 {
+    font-size: 1.5rem;
+    overflow: visible;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .main-navigation .site-title {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-navigation .site-title {
+    margin-left: 33% !important;
   }
 }
